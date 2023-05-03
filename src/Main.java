@@ -19,8 +19,8 @@ public class Main {
         System.out.println("Задача 1");
         int[] arr = generateRandomArray();
         int total = 0;
-        for (int i = 0; i < generateRandomArray().length; i++) {
-            total += generateRandomArray()[i];
+        for (int i = 0; i < arr.length; i++) {
+            total += arr[i];
         }
         System.out.println("сумма трат за месяц составили " + total + " рублей");
 
@@ -28,16 +28,16 @@ public class Main {
     public static void task2(){
         System.out.println("Задача 2");
         int[] arr = generateRandomArray();
-        int maxWeith = -1;
-        int minWeith = 200_001;
-        for (int i = 0; i < generateRandomArray().length; i++) {
-            if (generateRandomArray()[i] > maxWeith) {
-                maxWeith = generateRandomArray()[i];
+        int maxWeith = 100_000;
+        int minWeith = 200_000;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > maxWeith) {
+                maxWeith = arr[i];
             }
         }
-        for (int i = 0; i < generateRandomArray().length; i++) {
-            if (generateRandomArray()[i] < minWeith) {
-                minWeith = generateRandomArray()[i];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < minWeith) {
+                minWeith = arr[i];
             }
         }
         System.out.println("Минимальная сумма трат за день составили " + minWeith + " рублей. Максимальная сумма трат за день составила " + maxWeith + " рублей");
@@ -48,8 +48,8 @@ public class Main {
         int total = 0;
         int day = 30;
         float averageSumma = 0;
-        for (int i = 0; i < generateRandomArray().length; i++) {
-            total += generateRandomArray()[i];
+        for (int i = 0; i < arr.length; i++) {
+            total += arr[i];
         }
         averageSumma = total / day;
         System.out.println("Средняя сумма трат за месяц составила " + averageSumma + " рублей");
